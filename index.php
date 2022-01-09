@@ -18,18 +18,25 @@ class Movie {
     public $author;
     public $price;
 
+
+    #costruttore
+    function __construct($title, $author){
+
+        $this->title = $title;
+        $this->author = $author;
+
+    }
+
     #creo un metodo 
     public function getYear($year) {
         $this->year = $year;
     }
+
     public function getHire($price) {
         $this->price = $price;
     }
     
-    #costruttore
-    function __construct($title, $author){
-
-    }
+    
 }
 }
 
@@ -41,6 +48,9 @@ $horror-> title = 'VAN HELSING';
 $horror-> text = 'Horror, fantasy e azione: una ricetta semplice ma dal successo assicurato, quando lo chef è l\'abile Stephen Sommers e a dirigere le danze c\'è Logan-Hugh Jackman. Che la festa abbia inizio, dunque!';
 $horror-> author = 'Stephen Sommers';
 var_dump($horror);
+
+#con costruttore,per snellire un pò il codice
+$horror = new Movie('VAN HELSING', 'Stephen Sommers');
 
 #stampare a schermo le relative proprietà
 echo $horror-> title;
